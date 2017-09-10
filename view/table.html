@@ -1,0 +1,22 @@
+    <div class="container">
+    <div class="table-responsive"> 
+    <table class="table table-stripped table-hover">
+        <thead>
+        <th><i class="fa fa-user"></i>Name</th>
+        <th><i class="fa fa-phone"></i>Phone</th>
+        <th><i class="fa fa-pencil"></i>Update</th>
+        <th><i class="fa fa-trash-o"></i>Remove</th>
+            <th><i class="fa fa-search"></i>view </th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in contacts">
+            <td>{{x.name}}</td>
+            <td>{{x.phno}}</td>
+            <td ng-click="edit_contact(x)" ><div class="table_update bg-info text-center btn1"><i class="fa fa-pencil"></i>Update</div></td>
+            <td ng-click="delete_contact(x)"><div class="table_update bg-danger text-center btn1"><i class="fa fa-trash-o"></i>Remove</div></td>
+            <td ng-click="view_data(x)"><div class="table_update bg-success text-center btn1"><i class="fa fa-search"></i>View</div></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

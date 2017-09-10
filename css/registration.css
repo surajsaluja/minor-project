@@ -1,0 +1,25 @@
+.title{
+font-size:30px;
+}
+.form{
+    margin-top:20px;
+}
+.form-div{
+    position: relative;
+}
+.mail_symbol{
+    padding-top: 10px;
+    position: absolute;
+    font-size: 30px;
+}
+input[type="text"]{
+    font-size: 20px;
+    height: 40px;
+}
+.btn{
+    height:50px;
+    margin:10px 0px 10px 0px;
+}
+.help-message{
+    color:red;
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+</head>
+<body>
+<div class="container">
+    <form name="registration_form" ng-submit="registration_form.$valid&&submitform()" novalidate>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form">
+                <div class="title text-center">
+                User Registration
+                </div>
+                <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <i class="fa fa-user fa-2x"></i><span>Name</span>
+                                <input type="text" name="user_first" ng-model="contact.name" class="form-control" required placeholder="Robin">
+                            </div>
+                            <span class="help-message" ng-messages="registration_form.user_first.$error" ng-if="registration_form.$submitted||registration_form.user_first.$touched">   
+                        <span ng-message="required">First Name Required</span>
+                    </span>
+                        </div>  
+                    </div>  
+            </div>
+                <div class="form-div">
+                    <div class="row"> 
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <i class="fa fa-mobile fa-2x"></i><span>Phone Number</span>
+                                <input type="text" name="phone" ng-model="contact.phno" class="form-control" required pattern="^[789]\d{9}$" maxlength="10" placeholder="981*******">
+                            </div>
+                            <span class="help-message" ng-messages="registration_form.phone.$error"  ng-if="registration_form.$submitted||registration_form.phone.$touched">   
+                        <span ng-message="required">Phone Number Required</span>
+                         <span ng-message="pattern">Phone Number Not Valid</span>
+                    </span>
+                        </div>
+                    </div>   
+                </div>
+                <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <i class="fa fa-2x fa-envelope-o"></i><span>Email Id</span>
+                                <input type="text" name="email" ng-model="contact.email" class="form-control" required pattern="^[a-zA-Z0-9._]*[@][a-zA-Z]{3,7}[.][a-zA-Z]{2,3}$" placeholder="xyz@abc.com">
+                                <span class="help-message" ng-messages="registration_form.email.$error"  ng-if="registration_form.$submitted||registration_form.email.$touched">   
+                        <span ng-message="required">Email Id Required</span>
+                         <span ng-message="pattern">Email Id Not Valid</span>
+                    </span>
+                            </div> 
+                        </div>
+                    </div>   
+                </div>
+               <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <i class="fa fa-map-marker fa-2x"></i><span>Address</span>
+                                <input type="text" name="address" ng-model="contact.address" class="form-control" required placeholder="City, State, Country">
+                            </div> 
+                            <span class="help-message" ng-messages="registration_form.address.$error"  ng-if="registration_form.$submitted||registration_form.address.$touched">   
+                        <span ng-message="required">Address Required</span>
+                    </span>
+                        </div>  
+                    </div>   
+                </div>
+                <div class="button">
+                <div class="row">
+                    <div class="col-sm-4">
+                <button type="submit" class="btn btn-success col-xs-12">Submit</button>
+                    </div>
+                    <div class="col-sm-4">
+     <button type="button" class="btn btn-warning col-xs-12" ng-click='update_contact()'>Update</button>
+                    </div>
+                    <div class="col-sm-4">
+                   <a href="#!/"><button type="button" class="btn btn-danger col-xs-12">Cancel</button></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div ng-repeat="contact in contacts">
+        {{contact.name}}
+        </div>
+    </div>
+    </form>
+</div>  
+</body>
+</html>

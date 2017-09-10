@@ -1,0 +1,83 @@
+body{
+   font-family: 'Roboto', sans-serif !important;
+}
+        .form-box{
+        background-color:white;
+           // height: 500px;
+           // padding: 50px;
+        }
+        .card{
+            background-color:white;
+            height: 200px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .a{
+            background-color: yellow;
+            border:1px solid black;
+        }
+        .b{
+            background-color: green;
+            border:1px solid black;
+        }
+        .img{
+            float:left;
+            display:inline-block;
+            width:20%;
+            //background-color: cadetblue;
+            height:100px;
+            //border:1px solid black;
+            color:cornflowerblue;
+            font-size: 50px;
+            margin:25px 10px 25px 10px; 
+        }
+        .detail_right{
+            float:right;
+            display:inline-block;
+            width:70%;
+            //background-color: chartreuse;
+            padding:10px;
+            //border: 1px solid black;
+            height: 125px;
+        }
+        .name{
+            font-size: 30px;
+            font-weight: 500;
+        }
+        .phone, .email{
+            font-size: 20px;
+            font-weight: 300;
+             text-overflow: ellipsis;
+            overflow: hidden;
+        }
+            
+        .phone_span, .email_span{
+            float:right;
+            width:90%;
+            
+             text-overflow: ellipsis;
+            overflow: hidden;
+            padding-left:10px;
+            padding-top: 5px;
+        }
+.email_span:hover{
+    overflow: visible;
+    text-overflow: inherit;
+}
+.location{
+   // border:1px solid black;
+    margin-top:150px;
+    display: block;
+    font-size: 15px;
+    color:black;
+    font-weight: 100;
+}
+.location_span{
+    padding-left:10px;
+}
+        .icon{
+            float:left;
+            width:10%;              
+        }

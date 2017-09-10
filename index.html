@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html ng-app="myapp">
+	<head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+		<style>
+			section{
+				min-height:300px;
+			}
+			footer{
+				text-align:center;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<header>
+			<h1>My Routing App</h1>
+			<div style="text-align:right">
+				<a href="#!/">A Page</a> |
+				<a href="#!/cards">Cards</a> |
+				<a href="#!/register">Register</a>      
+			</div>
+		</header>
+		<section ng-view>
+		</section>
+        <footer>
+        <div class="col-md-3" id="add">
+            <a href="#!/register"><i class="fa fa-plus-circle fa-4x add-icon"><span></span></i></a>    
+    </div>
+        </footer>
+		<script src="angular_files/angular.min.js"></script>
+        <script src="angular_files/angular-messages.min.js"></script>
+		<script src="angular_files/angular-route.min.js"></script>
+		<script src="angular_files/app.min.js"></script> 
+    <link href="css/registration.css" rel="stylesheet">
+    <link href="css/view_user.css" rel="stylesheet">
+        <script src="angular_files/map.js"></script>
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">    
+
+	</body>
+</html>

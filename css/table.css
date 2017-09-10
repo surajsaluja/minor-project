@@ -1,0 +1,36 @@
+.btn1{
+    cursor: pointer;
+    width:150px;
+    border-radius: 3px;
+}
+.bg-info:hover{
+    background-color:deepskyblue;
+    color: white;
+}
+.bg-success:hover{
+    background-color: mediumseagreen;
+    color: white;
+}
+.bg-danger:hover{
+    background-color: deeppink;
+    color: white;
+}
+table{
+    font-size: 18px;
+}
+#add{
+     display:block;
+  float:bottom;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 150px;
+	align:right;
+    margin: 0 auto;
+}
+.add-icon{
+    color:deeppink;
+    font-size: 30px;
+    cursor: pointer;
+}

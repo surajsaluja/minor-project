@@ -1,0 +1,122 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="angular_files/angular.min.js"></script>
+    <script src="angular_files/angular-messages.min.js"></script>
+    <script src="angular_files/app.min.js"></script>
+    
+    <link href="css/registration.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">    
+</head>
+<body>
+<div class="container" ng-controller="form_ctrl">
+    <form name="registration_form" ng-submit="registration_form.$valid&&submitform()" novalidate>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form">
+                <div class="title text-center">
+                User Registration
+                </div>
+                <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name">First Name</label>
+                                <input type="text" name="user_first" ng-model="contact.first_name" class="form-control" required placeholder="Robin">
+                            </div>
+                            <span class="help-message" ng-messages="registration_form.user_first.$error" ng-if="registration_form.$submitted||registration_form.user_first.$touched">   
+                        <span ng-message="required">First Name Required</span>
+                    </span>
+                        </div>  
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name">Last Name</label>
+                                <input type="text" name="user_last" ng-model="contact.last_name" class="form-control" required placeholder="DSouza">
+                            </div>
+                            <span class="help-message" ng-messages="registration_form.user_last.$error"  ng-if="registration_form.$submitted||registration_form.user_last.$touched">   
+                        <span ng-message="required">Last Name Required</span>
+                    </span>
+                </div>
+                    </div>  
+            </div>
+                <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="name">Country Code</label>
+                                <input type="text" name="country_code" ng-model="contact.country_code" class="form-control">
+                            </div> 
+                        </div>  
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label for="name">Phone Number</label>
+                                <input type="text" name="phone" ng-model="contact.phone" class="form-control" required pattern="^[789]\d{9}$" maxlength="10" placeholder="981*******">
+                            </div>
+                            <span class="help-message" ng-messages="registration_form.phone.$error"  ng-if="registration_form.$submitted||registration_form.phone.$touched">   
+                        <span ng-message="required">Phone Number Required</span>
+                         <span ng-message="pattern">Phone Number Not Valid</span>
+                    </span>
+                        </div>
+                    </div>   
+                </div>
+                <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="name">Email Id</label>
+                                <input type="text" name="email" ng-model="contact.email" class="form-control" required pattern="^[a-zA-Z0-9._]*[@][a-zA-Z]{3,7}[.][a-zA-Z]{2,3}$" placeholder="xyz@abc.com">
+                                <span class="help-message" ng-messages="registration_form.email.$error"  ng-if="registration_form.$submitted||registration_form.email.$touched">   
+                        <span ng-message="required">Email Id Required</span>
+                         <span ng-message="pattern">Email Id Not Valid</span>
+                    </span>
+                            </div> 
+                        </div>
+                    </div>   
+                </div>
+               <div class="form-div">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label for="address" class="label-control">Address</label>
+                                <input type="text" name="address" ng-model="contact.address" class="form-control" required placeholder="City, State, Country">
+                            </div> 
+                            <span class="help-message" ng-messages="registration_form.address.$error"  ng-if="registration_form.$submitted||registration_form.address.$touched">   
+                        <span ng-message="required">Address Required</span>
+                    </span>
+                        </div>  
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="name">Pincode</label>
+                                <input type="text" name="pincode" ng-model="contact.pincode" class="form-control" required placeholder="pincode" pattern="\d{6}">
+                            </div>
+                             <span class="help-message" ng-messages="registration_form.pincode.$error"  ng-if="registration_form.$submitted||registration_form.pincode.$touched">   
+                              <span ng-message="required">Pincode Required</span>
+                            <span ng-message="pattern"> Pincode Not Valid</span>
+                    </span>
+                        </div>
+                    </div>   
+                </div>
+                <div class="button">
+                <div class="row">
+                    <div class="col-sm-4">
+                <button type="submit" class="btn btn-success col-xs-12">Submit</button>
+                    </div>
+                    <div class="col-sm-4">
+                <button type="submit" class="btn btn-warning col-xs-12">Reset</button>
+                    </div>
+                    <div class="col-sm-4">
+                <button type="submit" class="btn btn-danger col-xs-12">Cancel</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div ng-repeat="contact in contacts">
+        {{contact.name}}
+        </div>
+    </div>
+    </form>
+</div>  
+</body>
+</html>
